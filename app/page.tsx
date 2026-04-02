@@ -16,8 +16,34 @@ export default function Home() {
     ["Project links", "#links"],
   ] as const;
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        name: "ATHA Docs",
+        url: "https://atha-docs.pages.dev/",
+        description:
+          "Official ATHA documentation for installation, commands, troubleshooting, release notes, and package workflow behavior on Arch Linux.",
+      },
+      {
+        "@type": "SoftwareApplication",
+        name: "ATHA",
+        applicationCategory: "DeveloperApplication",
+        operatingSystem: "Arch Linux",
+        softwareVersion: "2.2.3",
+        url: "https://github.com/Bangkah/Atha",
+        downloadUrl: "https://aur.archlinux.org/packages/atha",
+      },
+    ],
+  };
+
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 lg:grid lg:grid-cols-[300px_minmax(0,1fr)]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <aside className="border-b border-slate-800 bg-slate-900/95 px-6 py-6 lg:sticky lg:top-0 lg:h-screen lg:border-b-0 lg:border-r">
         <div className="mb-5 flex items-center gap-3">
           <Image
@@ -31,9 +57,9 @@ export default function Home() {
             <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-amber-300">
               ATHA docs
             </p>
-            <h1 className="text-lg font-semibold leading-tight">
+            <p className="text-lg font-semibold leading-tight">
               Workflow layer for pacman
-            </h1>
+            </p>
           </div>
         </div>
 
@@ -82,11 +108,11 @@ export default function Home() {
               alt="ATHA logo"
               width={172}
               height={40}
-              className="mb-4 h-10 w-auto"
+              className="mb-4"
             />
-            <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
+            <h1 className="text-3xl font-semibold tracking-tight md:text-4xl">
               ATHA Documentation
-            </h2>
+            </h1>
             <p className="mt-4 max-w-3xl text-base leading-7 text-slate-300">
               ATHA is not a pacman replacement and not a yay clone. It adds
               plan mode, dry-run previews, local history, and doctor checks so
