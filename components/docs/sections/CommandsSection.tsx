@@ -16,8 +16,8 @@ export default function CommandsSection() {
         ))}
       </div>
       <p className="mt-3 text-sm text-slate-300">
-        Mode definitions: <strong>plan</strong> for decision analysis,
-        <strong>dry-run</strong> for execution simulation, and <strong>yes</strong>
+        Mode definitions: <strong>plan</strong> for decision analysis,{" "}
+        <strong>dry-run</strong> for execution simulation, and <strong>yes</strong>{" "}
         to skip prompts when supported.
       </p>
     </SectionShell>
