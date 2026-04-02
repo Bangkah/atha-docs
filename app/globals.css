@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--font-space-grotesk), "Trebuchet MS", sans-serif;
+}
+
+code,
+pre {
+  font-family: var(--font-ibm-plex-mono), Consolas, monospace;
+}
