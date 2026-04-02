@@ -1,0 +1,11 @@
+surface,button_text,funnel_stage,tracking_label,destination_url
+hero,Install from AUR,conversion,conversion__hero__install_from_aur,https://aur.archlinux.org/packages/atha
+hero,Install script,consideration,consideration__hero__view_install_script,https://raw.githubusercontent.com/Bangkah/Atha/main/install.sh
+hero,View source,awareness,awareness__hero__view_source,https://github.com/Bangkah/Atha
+hero,Read docs,consideration,consideration__hero__read_docs,https://github.com/Bangkah/Atha/wiki
+sticky_cta,Install ATHA,conversion,conversion__sticky_cta__install_from_aur,https://aur.archlinux.org/packages/atha
+sticky_cta,Script,consideration,consideration__sticky_cta__view_install_script,https://raw.githubusercontent.com/Bangkah/Atha/main/install.sh
+sticky_cta,Docs,consideration,consideration__sticky_cta__read_docs,https://github.com/Bangkah/Atha/wiki
+social_proof,Explore repository,awareness,awareness__social_proof__open_repository,https://github.com/Bangkah/Atha
+social_proof,Open AUR package,conversion,conversion__social_proof__open_aur_package,https://aur.archlinux.org/packages/atha
+social_proof,Read wiki,consideration,consideration__social_proof__read_wiki,https://github.com/Bangkah/Atha/wiki

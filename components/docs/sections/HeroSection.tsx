@@ -1,4 +1,5 @@
 import Image from "next/image";
+import TrackedLink from "../TrackedLink";
 
 export default function HeroSection() {
   return (
@@ -8,7 +9,7 @@ export default function HeroSection() {
     >
       <div>
         <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-amber-300">
-          Bangkah / Atha
+          Bangkah / ATHA
         </p>
         <Image
           src="/atha-logo.svg"
@@ -18,34 +19,51 @@ export default function HeroSection() {
           className="mb-4"
         />
         <h1 className="text-3xl font-semibold tracking-tight md:text-4xl">
-          See what happens before you install anything on Arch Linux.
+          Plan first, execute safely, and review everything after.
         </h1>
         <p className="mt-4 max-w-3xl text-base leading-7 text-slate-300">
-          ATHA adds safety, transparency, and history to your package workflow
-          without replacing pacman or cloning yay behavior.
+          ATHA gives Arch Linux users clearer package decisions with plan mode,
+          safer execution previews with dry-run, and reliable post-action
+          history.
         </p>
         <p className="mt-2 max-w-3xl text-sm leading-7 text-slate-400">
-          Built for users who want clearer decisions before execution and
-          auditability after execution.
+          It does not replace pacman. ATHA adds a workflow guardrail layer on
+          top of your existing package operations.
         </p>
 
         <div className="mt-5 flex flex-wrap gap-2">
-          <a
+          <TrackedLink
             className="rounded-md bg-amber-400 px-4 py-2 text-sm font-semibold text-slate-900 hover:bg-amber-300"
-            href="https://github.com/Bangkah/Atha/wiki"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Open wiki
-          </a>
-          <a
-            className="rounded-md border border-slate-700 bg-slate-800 px-4 py-2 text-sm font-semibold text-slate-100 hover:bg-slate-700"
             href="https://aur.archlinux.org/packages/atha"
-            target="_blank"
-            rel="noreferrer"
+            label="conversion__hero__install_from_aur"
+            location="hero"
           >
-            AUR package
-          </a>
+            Install ATHA in under 60 seconds
+          </TrackedLink>
+          <TrackedLink
+            className="rounded-md border border-slate-700 px-4 py-2 text-sm font-semibold text-slate-200 hover:bg-slate-800"
+            href="https://raw.githubusercontent.com/Bangkah/Atha/main/install.sh"
+            label="consideration__hero__view_install_script"
+            location="hero"
+          >
+            Install script
+          </TrackedLink>
+          <TrackedLink
+            className="rounded-md border border-slate-700 bg-slate-800 px-4 py-2 text-sm font-semibold text-slate-100 hover:bg-slate-700"
+            href="https://github.com/Bangkah/Atha"
+            label="awareness__hero__view_source"
+            location="hero"
+          >
+            View source
+          </TrackedLink>
+          <TrackedLink
+            className="rounded-md border border-slate-700 px-4 py-2 text-sm font-semibold text-slate-200 hover:bg-slate-800"
+            href="https://github.com/Bangkah/Atha/wiki"
+            label="consideration__hero__read_docs"
+            location="hero"
+          >
+            Read docs
+          </TrackedLink>
         </div>
       </div>
 

@@ -1,16 +1,28 @@
-ATHA documentation website built with Next.js.
+ATHA product landing page built with Next.js.
 
 ## Overview
 
-This project provides a web documentation experience for ATHA with content aligned to the official repository and wiki.
+This project provides a product-focused landing experience for ATHA, with official docs and links as supporting resources.
+
+Official one-line pitch:
+
+ATHA makes Arch Linux package operations safer, clearer, and reviewable.
+
+Brand voice principles:
+
+- Direct
+- Practical
+- Trustworthy
 
 ## Features
 
-- Standard documentation-style layout
+- Product landing page positioning
 - Sidebar section navigation
 - Tailwind-based UI styling
 - Mobile responsive design
-- Content aligned with ATHA wiki pages
+- Conversion-focused sections and sticky CTA
+- DataLayer-based analytics events (CTA click + scroll depth)
+- Built-in brand guide section for messaging consistency
 
 ## Tech Stack
 
@@ -18,6 +30,7 @@ This project provides a web documentation experience for ATHA with content align
 - React
 - Tailwind CSS
 - TypeScript
+- Optional GTM + GA4 integration
 
 ## Getting Started
 
@@ -42,16 +55,45 @@ Open http://localhost:3000.
 - npm run start: run production server
 - npm run lint: run eslint checks
 
+## Analytics
+
+This project emits engagement events to `window.dataLayer`:
+
+- `atha_cta_click`
+- `atha_scroll_depth`
+
+Set `NEXT_PUBLIC_GTM_ID` to auto-load GTM script bootstrap from app layout.
+
+Detailed mapping guide for GTM and GA4:
+
+- docs/analytics-gtm.md
+
+## Brand Guide
+
+Landing page includes a dedicated brand guide section with:
+
+- One-line product pitch
+- Tone principles
+- Logo usage rules
+
+Official reference:
+
+- https://github.com/Bangkah/Atha/wiki/Brand-Guidelines
+- docs/brand-copy-cheatsheet.md
+
 ## Project Structure
 
 - app/layout.tsx: global layout and metadata
-- app/page.tsx: main documentation page content
+- app/page.tsx: main landing page composition
 - app/globals.css: global base styles and Tailwind import
+- components/docs/analytics.ts: dataLayer event helpers
+- components/docs/TrackedLink.tsx: tracked CTA links
+- components/docs/ScrollDepthTracker.tsx: scroll milestone events
 - public/: static assets
 
 ## Content Source
 
-Documentation content is based on:
+Content is based on official ATHA sources:
 
 - GitHub repository: https://github.com/Bangkah/Atha
 - Wiki: https://github.com/Bangkah/Atha/wiki
@@ -70,5 +112,5 @@ Suggested settings:
 
 ## License
 
-This docs website project follows the repository license policy.
+This landing page project follows the upstream ATHA repository license policy (MIT).
 

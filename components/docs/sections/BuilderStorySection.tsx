@@ -1,12 +1,8 @@
+import SectionShell from "../SectionShell";
+
 export default function BuilderStorySection() {
   return (
-    <section className="rounded-xl border border-slate-800 bg-slate-900/70 p-5" id="builder-story">
-      <div className="mb-3">
-        <p className="mb-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-amber-300">
-          Why I built ATHA
-        </p>
-        <h3 className="text-2xl font-semibold tracking-tight">A short maintainer story</h3>
-      </div>
+    <SectionShell id="builder-story" eyebrow="Why I built ATHA" title="A short maintainer story">
       <p className="text-sm leading-7 text-slate-300">
         ATHA started from a practical need: package operations felt too implicit
         for routine work. The goal was never to replace pacman, but to make
@@ -16,6 +12,6 @@ export default function BuilderStorySection() {
         If you care about operational clarity before pressing Enter, ATHA is
         designed for that exact workflow.
       </p>
-    </section>
+    </SectionShell>
   );
 }

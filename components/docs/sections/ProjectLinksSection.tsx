@@ -1,35 +1,9 @@
-const projectLinks = [
-  {
-    title: "GitHub repository",
-    desc: "Source code, wiki, and releases.",
-    href: "https://github.com/Bangkah/Atha",
-  },
-  {
-    title: "AUR package",
-    desc: "Published package entry for Arch users.",
-    href: "https://aur.archlinux.org/packages/atha",
-  },
-  {
-    title: "Issue tracker",
-    desc: "Bug reports, feature discussion, and feedback.",
-    href: "https://github.com/Bangkah/Atha/issues",
-  },
-  {
-    title: "Clone wiki locally",
-    desc: "Repository: https://github.com/Bangkah/Atha.wiki.git",
-    href: "https://github.com/Bangkah/Atha.wiki.git",
-  },
-] as const;
+import SectionShell from "../SectionShell";
+import { projectLinks } from "../data";
 
 export default function ProjectLinksSection() {
   return (
-    <section className="rounded-xl border border-slate-800 bg-slate-900/70 p-5" id="links">
-      <div className="mb-3">
-        <p className="mb-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-amber-300">
-          Project links
-        </p>
-        <h3 className="text-2xl font-semibold tracking-tight">Official project resources.</h3>
-      </div>
+    <SectionShell id="links" eyebrow="Project links" title="Official project resources.">
       <div className="grid gap-2 md:grid-cols-2 lg:grid-cols-3">
         {projectLinks.map((link) => (
           <a
@@ -44,6 +18,6 @@ export default function ProjectLinksSection() {
           </a>
         ))}
       </div>
-    </section>
+    </SectionShell>
   );
 }

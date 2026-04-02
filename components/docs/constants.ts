@@ -1,17 +1,23 @@
 export const navItems = [
-  ["Introduction", "#overview"],
-  ["Why Atha", "#why"],
+  ["Product overview", "#overview"],
+  ["Why ATHA", "#why"],
+  ["Use cases", "#use-cases"],
+  ["Why switch", "#why-switch"],
+  ["Before vs after", "#before-after"],
+  ["Trust signals", "#social-proof"],
+  ["FAQ", "#faq"],
   ["Quick example", "#quick-example"],
   ["Core pillars", "#pillars"],
   ["Feature comparison", "#comparison"],
   ["Quick start", "#quick-start"],
   ["Builder story", "#builder-story"],
+  ["Brand guide", "#brand-guide"],
   ["Installation", "#installation"],
   ["Commands", "#commands"],
   ["Operational notes", "#operational-notes"],
   ["Logs and history", "#paths"],
   ["Troubleshooting", "#troubleshooting"],
-  ["Docs index", "#docs"],
+  ["Resources", "#docs"],
   ["Project links", "#links"],
 ] as const;
 
@@ -19,11 +25,17 @@ export const structuredData = {
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "Organization",
+      name: "ATHA",
+      url: "https://atha-docs.pages.dev/",
+      logo: "https://atha-docs.pages.dev/atha-mark.svg",
+    },
+    {
       "@type": "WebSite",
-      name: "ATHA Docs",
+      name: "ATHA",
       url: "https://atha-docs.pages.dev/",
       description:
-        "Official ATHA documentation for installation, commands, troubleshooting, release notes, and package workflow behavior on Arch Linux.",
+        "Official ATHA product landing page for safer Arch Linux package workflows.",
     },
     {
       "@type": "SoftwareApplication",

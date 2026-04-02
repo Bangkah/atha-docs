@@ -14,15 +14,15 @@ export default function Sidebar() {
         />
         <div>
           <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-amber-300">
-            ATHA docs
+            Official ATHA
           </p>
           <p className="text-lg font-semibold leading-tight">
-            Workflow layer for pacman
+            Safer workflows for pacman
           </p>
         </div>
       </div>
 
-      <nav className="grid gap-1" aria-label="Documentation navigation">
+      <nav className="grid gap-1" aria-label="Product navigation">
         {navItems.map(([label, href]) => (
           <a
             key={label}
@@ -36,11 +36,11 @@ export default function Sidebar() {
 
       <div className="mt-6 rounded-lg border border-slate-700 bg-slate-800/70 p-4">
         <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-amber-300">
-          Project status
+          Brand statement
         </p>
         <p className="mb-3 text-sm leading-6 text-slate-300">
-          Arch Linux shell tooling focused on safety, transparency, and
-          auditability.
+          ATHA is an Arch Linux package workflow layer focused on safety,
+          transparency, and auditability.
         </p>
         <a
           href="https://github.com/Bangkah/Atha"

@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Mono, Space_Grotesk } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
+
+const gtmId = process.env.NEXT_PUBLIC_GTM_ID;
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
@@ -16,19 +19,19 @@ const ibmPlexMono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://atha-docs.pages.dev"),
   title: {
-    default: "ATHA Documentation",
-    template: "%s | ATHA Docs",
+    default: "ATHA | Safer Arch Package Workflows",
+    template: "%s | ATHA",
   },
   description:
-    "Official ATHA documentation for installation, commands, troubleshooting, release notes, and package workflow behavior on Arch Linux.",
-  applicationName: "ATHA Docs",
+    "Official ATHA landing page. Safer package workflows on Arch Linux with plan mode, dry-run safety, and operation history.",
+  applicationName: "ATHA",
   keywords: [
     "ATHA",
     "Arch Linux",
     "pacman",
     "AUR",
     "package workflow",
-    "documentation",
+    "landing page",
   ],
   alternates: {
     canonical: "/",
@@ -36,24 +39,24 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "/",
-    siteName: "ATHA Docs",
-    title: "ATHA Documentation",
+    siteName: "ATHA",
+    title: "ATHA | Safer Arch Package Workflows",
     description:
-      "Official ATHA documentation for installation, commands, troubleshooting, release notes, and package workflow behavior on Arch Linux.",
+      "Safer package workflows on Arch Linux with plan mode, dry-run, and operation history.",
     images: [
       {
         url: "/atha-logo.svg",
         width: 1200,
         height: 630,
-        alt: "ATHA documentation",
+        alt: "ATHA product landing page",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "ATHA Documentation",
+    title: "ATHA | Safer Arch Package Workflows",
     description:
-      "Official ATHA documentation for installation, commands, troubleshooting, and package workflow behavior on Arch Linux.",
+      "Workflow layer for pacman with safer execution and clearer decisions.",
     images: ["/atha-logo.svg"],
   },
   robots: {
@@ -84,7 +87,18 @@ export default function RootLayout({
       lang="en"
       className={`${spaceGrotesk.variable} ${ibmPlexMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {gtmId ? (
+          <Script id="gtm-bootstrap" strategy="afterInteractive">
+            {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','${gtmId}');`}
+          </Script>
+        ) : null}
+        {children}
+      </body>
     </html>
   );
 }

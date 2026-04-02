@@ -1,14 +1,12 @@
+import SectionShell from "../SectionShell";
+
 export default function WhySection() {
   return (
-    <section className="rounded-xl border border-slate-800 bg-slate-900/70 p-5" id="why">
-      <div className="mb-3">
-        <p className="mb-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-amber-300">
-          Why ATHA exists
-        </p>
-        <h3 className="text-2xl font-semibold tracking-tight">
-          Safer package workflows with explicit decisions.
-        </h3>
-      </div>
+    <SectionShell
+      id="why"
+      eyebrow="Why ATHA exists"
+      title="Safer package workflows with explicit decisions."
+    >
       <p className="text-sm leading-7 text-slate-300">
         Daily package operations are often opaque in routine usage. ATHA makes
         workflows explicit before execution, traceable after execution, and
@@ -35,6 +33,6 @@ export default function WhySection() {
           </p>
         </article>
       </div>
-    </section>
+    </SectionShell>
   );
 }
