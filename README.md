@@ -1,6 +1,4 @@
-# ATHA Docs
-
-Official documentation website for ATHA, built with Next.js and Tailwind CSS.
+ATHA documentation website built with Next.js.
 
 ## Overview
 
