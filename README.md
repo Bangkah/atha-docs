@@ -1,4 +1,4 @@
-ATHA documentation website built with Next.js.
+ATHA documentation website.
 
 ## Run Local
 
