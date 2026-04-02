@@ -19,12 +19,16 @@ const ibmPlexMono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://atha-docs.pages.dev"),
   title: {
-    default: "ATHA | Safer Arch Package Workflows",
+    default: "ATHA Docs | Safer Arch Package Workflows",
     template: "%s | ATHA",
   },
   description:
-    "Official ATHA landing page. Safer package workflows on Arch Linux with plan mode, dry-run safety, and operation history.",
+    "Official ATHA docs and landing page. Safer package workflows on Arch Linux with plan mode, dry-run safety, troubleshooting guides, and operation history.",
   applicationName: "ATHA",
+  category: "Developer Tools",
+  authors: [{ name: "Bangkah" }],
+  creator: "Bangkah",
+  publisher: "Bangkah",
   keywords: [
     "ATHA",
     "ATHA docs",
@@ -48,22 +52,37 @@ export const metadata: Metadata = {
     "troubleshooting arch packages",
     "docs atha",
     "dokumentasi atha",
+    "panduan atha",
+    "atha commands",
+    "atha troubleshooting",
+    "atha arch linux docs",
+    "atha package workflow docs",
+    "atha plan mode",
+    "atha dry-run mode",
+    "pacman safety workflow",
+    "aur package atha",
     "alat paket arch linux",
     "landing page",
   ],
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   alternates: {
-    canonical: "/",
+    canonical: "https://atha-docs.pages.dev/",
   },
   verification: {
     google: "NGXlme7e5z94b134xNmVz9R34KrMFZLhJ2oH2seTCU8",
   },
   openGraph: {
     type: "website",
-    url: "/",
+    url: "https://atha-docs.pages.dev/",
     siteName: "ATHA",
-    title: "ATHA | Safer Arch Package Workflows",
+    title: "ATHA Docs | Safer Arch Package Workflows",
     description:
-      "Safer package workflows on Arch Linux with plan mode, dry-run, and operation history.",
+      "Official ATHA docs and landing page for safer package workflows on Arch Linux with plan mode, dry-run, and operation history.",
+    locale: "en_US",
     images: [
       {
         url: "/atha-logo.svg",
@@ -75,9 +94,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "ATHA | Safer Arch Package Workflows",
+    title: "ATHA Docs | Safer Arch Package Workflows",
     description:
-      "Workflow layer for pacman with safer execution and clearer decisions.",
+      "Official ATHA docs and workflow layer for pacman with safer execution and clearer decisions.",
     images: ["/atha-logo.svg"],
   },
   robots: {
@@ -95,6 +114,9 @@ export const metadata: Metadata = {
     icon: "/atha-mark.svg",
     shortcut: "/atha-mark.svg",
     apple: "/atha-mark.svg",
+  },
+  other: {
+    "google": "notranslate",
   },
 };
 
