@@ -111,6 +111,16 @@ export const troubleshooting = [
 
 export const docsLinks = [
   {
+    title: "ATHA Arch Linux guide",
+    desc: "Keyword-focused page for ATHA on Arch Linux workflows.",
+    href: "/atha-arch-linux",
+  },
+  {
+    title: "ATHA dry-run guide",
+    desc: "Keyword-focused page for ATHA dry-run usage and safe execution flow.",
+    href: "/atha-dry-run",
+  },
+  {
     title: "Home",
     desc: "Start page and quick navigation.",
     href: "https://github.com/Bangkah/Atha/wiki/Home",
