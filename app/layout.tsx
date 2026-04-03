@@ -4,6 +4,7 @@ import Script from "next/script";
 import "./globals.css";
 
 const gtmId = process.env.NEXT_PUBLIC_GTM_ID;
+const adsenseClient = "ca-pub-5584140685283917";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
@@ -117,6 +118,7 @@ export const metadata: Metadata = {
   },
   other: {
     "google": "notranslate",
+    "google-adsense-account": adsenseClient,
   },
 };
 
@@ -131,6 +133,13 @@ export default function RootLayout({
       className={`${spaceGrotesk.variable} ${ibmPlexMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <Script
+          id="adsense-loader"
+          strategy="afterInteractive"
+          async
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseClient}`}
+          crossOrigin="anonymous"
+        />
         {gtmId ? (
           <Script id="gtm-bootstrap" strategy="afterInteractive">
             {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
