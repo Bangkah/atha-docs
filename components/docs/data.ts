@@ -270,16 +270,16 @@ export const socialProofSignals = [
 
 export const faqItems = [
   {
-    q: "ATHA ini ganti pacman, atau jalan bareng?",
-    a: "ATHA jalan bareng pacman. Tujuannya bukan mengganti, tapi menambah guardrail workflow: plan sebelum eksekusi, dry-run untuk simulasi, dan history untuk review.",
+    q: "Does ATHA replace pacman or work alongside it?",
+    a: "ATHA works alongside pacman. It is not a replacement, but a workflow guardrail layer with plan mode before execution, dry-run for simulation, and history for review.",
   },
   {
-    q: "Kapan saya pakai plan dan kapan pakai dry-run?",
-    a: "Pakai plan saat kamu mau lihat keputusan paket dan sumbernya. Pakai dry-run saat kamu sudah siap uji simulasi eksekusi tanpa mengubah sistem.",
+    q: "When should I use plan mode vs dry-run mode?",
+    a: "Use plan mode when you want to inspect package decisions and sources. Use dry-run when you want to simulate execution without changing the system.",
   },
   {
-    q: "Cocok buat pemakaian harian atau cuma buat advanced user?",
-    a: "Cocok untuk harian, terutama kalau kamu ingin update dan install yang lebih jelas alurnya. Advanced user tetap dapat benefit karena semua langkah lebih mudah diaudit.",
+    q: "Is ATHA for daily use or only for advanced users?",
+    a: "ATHA is suitable for daily use, especially if you want clearer install and update workflows. Advanced users still benefit because each step is easier to audit.",
   },
 ] as const;
 

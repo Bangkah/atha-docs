@@ -3,7 +3,7 @@ import { faqItems } from "../data";
 
 export default function FaqSection() {
   return (
-    <SectionShell id="faq" eyebrow="FAQ" title="Pertanyaan yang paling sering ditanyain sebelum install">
+    <SectionShell id="faq" eyebrow="FAQ" title="Frequently asked questions before installation">
       <div className="grid gap-2">
         {faqItems.map((item, index) => (
           <details key={item.q} className="rounded-lg border border-slate-700 bg-slate-800/60 p-4" open={index === 0}>
