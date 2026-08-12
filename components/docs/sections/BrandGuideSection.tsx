@@ -39,10 +39,26 @@ export default function BrandGuideSection() {
           <p className="text-xs font-semibold uppercase tracking-[0.14em] text-amber-300">Brand assets</p>
           <div className="mt-3 space-y-2">
             <div className="rounded-md border border-slate-700 bg-slate-900 p-3">
-              <Image src="/atha-logo.svg" alt="ATHA wordmark" width={180} height={42} className="h-auto w-auto" />
+              <Image 
+                src="/atha-logo.svg" 
+                alt="ATHA wordmark" 
+                width={180} 
+                height={42} 
+                suppressHydrationWarning
+                style={{ width: "auto", height: "auto" }}
+                className="h-auto w-auto" 
+              />
             </div>
             <div className="rounded-md border border-slate-700 bg-slate-900 p-3">
-              <Image src="/atha-mark.svg" alt="ATHA mark" width={48} height={48} className="h-12 w-12" />
+              <Image 
+                src="/atha-mark.svg" 
+                alt="ATHA mark" 
+                width={48} 
+                height={48} 
+                suppressHydrationWarning
+                style={{ width: "auto", height: "auto" }}
+                className="h-12 w-12" 
+              />
             </div>
           </div>
           <TrackedLink

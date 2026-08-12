@@ -16,6 +16,9 @@ export default function HeroSection() {
           alt="ATHA logo"
           width={172}
           height={40}
+          priority
+          suppressHydrationWarning
+          style={{ width: "auto", height: "auto" }}
           className="mb-4"
         />
         <h1 className="text-3xl font-semibold tracking-tight md:text-4xl">

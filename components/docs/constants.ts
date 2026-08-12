@@ -13,7 +13,7 @@ export const navItems = [
   ["Feature comparison", "#comparison"],
   ["Quick start", "#quick-start"],
   ["Builder story", "#builder-story"],
-  ["Brand guide", "#brand-guide"],
+  // ["Brand guide", "#brand-guide"],
   ["Installation", "#installation"],
   ["Commands", "#commands"],
   ["Operational notes", "#operational-notes"],
