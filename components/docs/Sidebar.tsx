@@ -3,20 +3,26 @@ import { navItems } from "./constants";
 
 export default function Sidebar() {
   return (
-    <aside className="border-b border-slate-800 bg-slate-900/95 px-6 py-6 lg:sticky lg:top-0 lg:h-screen lg:border-b-0 lg:border-r">
+    <aside className="border-b border-slate-800 bg-slate-900/95 px-6 py-6 lg:sticky lg:top-0 lg:h-screen lg:overflow-y-auto lg:border-b-0 lg:border-r">
       <div className="mb-5 flex items-center gap-3">
-        <Image
-          src="/atha-mark.svg"
-          alt="ATHA mark"
-          width={40}
-          height={40}
-          className="h-10 w-10 rounded-md bg-slate-800 p-1"
-        />
-        <div>
+        {/* Tambahkan shrink-0 pada kontainer gambar agar ukurannya dikunci */}
+        <div className="relative h-10 w-10 shrink-0 rounded-md bg-slate-800 p-1">
+          <Image
+            src="/atha-mark.svg"
+            alt="ATHA mark"
+            fill
+            priority
+            suppressHydrationWarning
+            className="object-contain p-0.5"
+          />
+        </div>
+        
+        {/* Kontainer teks diberi min-w-0 agar wrapping aman */}
+        <div className="min-w-0">
           <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-amber-300">
             Official ATHA
           </p>
-          <p className="text-lg font-semibold leading-tight">
+          <p className="text-lg font-semibold leading-tight text-slate-100">
             Safer workflows for pacman
           </p>
         </div>
@@ -34,7 +40,7 @@ export default function Sidebar() {
         ))}
       </nav>
 
-      <div className="mt-6 rounded-lg border border-slate-700 bg-slate-800/70 p-4">
+      <div className="mt-3 rounded-lg border border-slate-700 bg-slate-800/70 p-4">
         <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-amber-300">
           Brand statement
         </p>

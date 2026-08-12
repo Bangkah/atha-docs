@@ -150,11 +150,11 @@ export const docsLinks = [
     desc: "Official announcement for the latest documented release.",
     href: "https://github.com/Bangkah/Atha/wiki/Release-Announcement-v2.2.3",
   },
-  {
-    title: "Brand guidelines",
-    desc: "Logo and brand usage references.",
-    href: "https://github.com/Bangkah/Atha/wiki/Brand-Guidelines",
-  },
+  // {
+  //   title: "Brand guidelines",
+  //   desc: "Logo and brand usage references.",
+  //   href: "https://github.com/Bangkah/Atha/wiki/Brand-Guidelines",
+  // },
   {
     title: "AUR reviewer response",
     desc: "Maintainer clarification and packaging rationale.",

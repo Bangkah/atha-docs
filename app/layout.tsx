@@ -116,7 +116,7 @@ export const metadata: Metadata = {
     apple: "/atha-mark.svg",
   },
   other: {
-    "google": "notranslate",
+    google: "notranslate",
   },
 };
 
@@ -128,16 +128,18 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${spaceGrotesk.variable} ${ibmPlexMono.variable} h-full antialiased`}
     >
-      <head>
-        <script
-          async
+      <body className="min-h-full flex flex-col">
+        {/* Adsense Script menggunakan komponen Script Next.js */}
+        <Script
+          id="google-adsense"
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5584140685283917"
+          strategy="afterInteractive"
           crossOrigin="anonymous"
         />
-      </head>
-      <body className="min-h-full flex flex-col">
+
         {gtmId ? (
           <Script id="gtm-bootstrap" strategy="afterInteractive">
             {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

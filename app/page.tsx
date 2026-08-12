@@ -44,7 +44,7 @@ export default function Home() {
         <FeatureComparisonSection />
         <QuickStartSection />
         <BuilderStorySection />
-        <BrandGuideSection />
+        {/* <BrandGuideSection /> */}
         <InstallationSection />
         <CommandsSection />
         <OperationalNotesSection />
